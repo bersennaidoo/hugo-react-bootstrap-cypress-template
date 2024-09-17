@@ -1,0 +1,9 @@
+[build]
+publish = "public"
+command = "yarn install && node ./esmscript.prod.mjs && hugo --gc --minify"
+NETLIFY_USE_YARN = "true"
+
+[context.production.environment]
+HUGO_VERSION = "0.124.1"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
